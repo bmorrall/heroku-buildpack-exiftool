@@ -21,10 +21,10 @@ BUILDPACK_DIR=`cd $(dirname $0)/..; pwd`
 if [ -f $ENV_DIR/EXIFTOOL_URL_CUSTOM ]; then
   TARBALL_URL=$( cat $ENV_DIR/EXIFTOOL_URL_CUSTOM )
   echo "Start downloading Exiftool from $TARBALL_URL" | indent
-else  
+else
   echo "Custom Exiftool URL is not set, start downloading from default location" | indent
-  # set default TARBALL_URL to v13.08
-  TARBALL_URL="https://exiftool.org/Image-ExifTool-13.08.tar.gz"
+  # set default TARBALL_URL to v13.53
+  TARBALL_URL="https://exiftool.org/Image-ExifTool-13.53.tar.gz"
 fi
 
 RENAME_DIR="$(echo "$TARBALL_URL" | perl -ne '/.+\/(.+)\.tar\.gz/ && print $1')"
