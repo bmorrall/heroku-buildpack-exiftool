@@ -23,8 +23,8 @@ if [ -f $ENV_DIR/EXIFTOOL_URL_CUSTOM ]; then
   echo "Start downloading Exiftool from $TARBALL_URL" | indent
 else
   echo "Custom Exiftool URL is not set, start downloading from default location" | indent
-  # set default TARBALL_URL to v13.53
-  TARBALL_URL="https://exiftool.org/Image-ExifTool-13.54.tar.gz"
+  # set default TARBALL_URL to v13.54
+  TARBALL_URL="https://raw.githubusercontent.com/bmorrall/heroku-buildpack-exiftool/refs/heads/master/vendor/Image-ExifTool-13.54.tar.gz"
 fi
 
 RENAME_DIR="$(echo "$TARBALL_URL" | perl -ne '/.+\/(.+)\.tar\.gz/ && print $1')"
